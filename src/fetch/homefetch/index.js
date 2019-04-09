@@ -1,8 +1,8 @@
 import { get } from '../get'
 
 export function getAdData() {
-   const res = get('/api/homead')
-   return res
+   const result = get('/homead');
+   return result
 }
 
 // export function getListata(city,page) {

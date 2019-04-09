@@ -5,7 +5,7 @@ const App = new Koa();
 
 let homeAdData = require('./homemock/ad');
 
-router.get('/api/homead',async (ctx,next) => {
+router.get('/homead',async (ctx,next) => {
    ctx.body = homeAdData
 });
 

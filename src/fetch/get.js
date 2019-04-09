@@ -9,6 +9,5 @@ export function get(url) {
          'Accept': 'application/json, text/plain, */*'
       }
    });
-
    return result;
 }

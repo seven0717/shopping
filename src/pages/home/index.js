@@ -8,6 +8,7 @@ export default class Home extends Component {
          <div>
             <Header cityName="北京"/>
             <Banner/>
+            <HomeAd/>
          </div>
       )
    }
