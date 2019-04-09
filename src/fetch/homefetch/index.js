@@ -5,6 +5,7 @@ export function getAdData() {
    return result
 }
 
+
 // export function getListata(city,page) {
 //    const res = get('/api/homelist/' + encodeURIComponent(city) + '/' + page)
 //    return res
