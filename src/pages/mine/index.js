@@ -4,7 +4,7 @@ import Nav from '../../components/nav'
 export default class Mine extends Component {
    render(){
       return (
-         <div className="NotFound">
+         <div>
             mine
             <Nav/>
          </div>

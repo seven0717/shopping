@@ -4,7 +4,7 @@ import Nav from '../../components/nav'
 export default class Older extends Component {
    render(){
       return (
-         <div className="NotFound">
+         <div>
             older
             <Nav/>
          </div>
