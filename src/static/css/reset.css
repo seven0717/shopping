@@ -27,7 +27,7 @@ time, mark, audio, video, input {
   box-sizing: border-box;
 }
 
-/* HTML5 display-role reset for older browsers */
+/* HTML5 display-role reset for order browsers */
 article, aside, details, figcaption, figure,
 footer, header, menu, nav, section {
   display: block;

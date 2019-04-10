@@ -3,6 +3,7 @@ import Header from '../../components/header'
 import Banner from '../../components/banner'
 import HomeAd from './subhome'
 import HomeList from './subhome/list'
+import Nav from '../../components/nav'
 export default class Home extends Component {
    render(){
       return (
@@ -13,6 +14,7 @@ export default class Home extends Component {
             <HomeAd/>
             <div style={{height: '15px'}}>{/* 分割线 */}</div>
             <HomeList city="北京"/>
+            <Nav/>
          </div>
       )
    }
