@@ -16,7 +16,6 @@ export default class Carousel extends React.Component {
          auto: 2500,
          // callback可以拿到每次录播index
          callback: function(index) {
-            console.log(index);
             // 更新当前轮播图的index
             this.setState({
                index: index
