@@ -1,0 +1,1 @@
+export const USERINFO_CITY = "USERINFO_CITY"; // 城市

@@ -4,6 +4,7 @@ import Home from '../pages/home'
 import NotFound from '../pages/404';
 import Mine from '../pages/mine';
 import Order from '../pages/order';
+import City from '../pages/city';
 
 
 export default class SubRouter extends Component {
@@ -14,6 +15,7 @@ export default class SubRouter extends Component {
             <Route exact path='/' component={ Home }></Route>
             <Route path='/order' component={ Order }></Route>
             <Route path='/mine' component={ Mine }></Route>
+            <Route path='/city' component={ City }></Route>
             <Route component={ NotFound }></Route>
          </Switch>
       )

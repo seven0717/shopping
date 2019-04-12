@@ -1,7 +1,7 @@
 import React, {Component} from 'react'
 import "./style.less"
 import SearchInput from '../searchInput'
-
+import { Link } from 'react-router-dom';
 export default class Header extends Component {
    render() {
       return (
@@ -9,11 +9,11 @@ export default class Header extends Component {
 
             {/*城市*/}
             <div className="home-header-left left">
-               <a href="#">
+               <Link to="/city">
                   <span>{this.props.cityName}</span>
                   &nbsp;
                   <i className="icon-angle-down"></i>
-               </a>
+               </Link>
             </div>
 
             {/*右侧*/}

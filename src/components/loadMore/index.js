@@ -21,7 +21,7 @@ export default class LoadMore extends Component {
       // 读取当前元素wrapper
       const Fn = this.props.LoadMoreFn;
       const wrp = this.refs.wrapper;
-      let timeoutid;
+      // let timeoutid;
 
       function callB(){
          // getBoundingClientRect用于获得页面中某个元素的左，上，右和下分别相对浏览器视窗的位置

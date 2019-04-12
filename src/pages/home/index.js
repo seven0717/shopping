@@ -4,11 +4,15 @@ import Banner from '../../components/banner'
 import HomeAd from './subhome'
 import HomeList from './subhome/list'
 import Nav from '../../components/nav'
-export default class Home extends Component {
+import { connect } from 'react-redux'
+import { bindActionCreators } from 'redux'
+import * as userInfoActionsFromOtherFile from '../../reduxs/actions'
+import { withRouter } from 'react-router-dom'
+class Home extends Component {
    render(){
       return (
          <div>
-            <Header cityName="北京"/>
+            <Header cityName={ this.props.userinfo.cityName }/>
             <Banner/>
             <div style={{height: '15px'}}>{/* 分割线 */}</div>
             <HomeAd/>
@@ -19,3 +23,21 @@ export default class Home extends Component {
       )
    }
 }
+
+/*************************************************************/
+function mapStateToProps(state) {
+   return {
+      userinfo:state.userinfo
+   }
+}
+
+function mapispatchToProps(dispatch) {
+   return {
+      actactions:bindActionCreators(userInfoActionsFromOtherFile,dispatch)
+   }
+}
+
+export default withRouter(connect(
+   mapStateToProps,
+   mapispatchToProps
+)(Home))
