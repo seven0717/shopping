@@ -12,12 +12,12 @@ class Home extends Component {
    render(){
       return (
          <div>
-            <Header cityName={ this.props.userinfo.cityName }/>
+            <Header cityName={ this.props.userinfo.cityName } history={this.props.history}/>
             <Banner/>
             <div style={{height: '15px'}}>{/* 分割线 */}</div>
             <HomeAd/>
             <div style={{height: '15px'}}>{/* 分割线 */}</div>
-            <HomeList city="北京"/>
+            <HomeList city={ this.props.userinfo.cityName }/>
             <Nav/>
          </div>
       )

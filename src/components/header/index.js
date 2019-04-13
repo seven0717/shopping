@@ -26,10 +26,16 @@ export default class Header extends Component {
                <div className="search-container">
                   <i className="icon-search"></i>
                   &nbsp;
-                  <SearchInput value=""/>
+                  <SearchInput defaultValue="" enterHandle={this.enterHandle.bind(this)}/>
                </div>
             </div>
          </div>
       )
+   }
+
+   enterHandle(value){
+      console.log(value);
+      // 路由跳转
+      this.props.history.push('/search/all/' + encodeURIComponent(value))
    }
 }

@@ -3,6 +3,8 @@ import { connect } from 'react-redux'
 import { bindActionCreators } from 'redux'
 import * as userInfoActionsFromOtherFile from '../reduxs/actions'
 import { withRouter } from 'react-router-dom'
+import Local from '../utils';
+import { CITYNAME } from '../utils/keys'
 class App extends Component {
    constructor(){
       super();
@@ -11,8 +13,12 @@ class App extends Component {
       }
    }
    componentDidMount() {
-   //   初始化城市
-      let cityName = '上海';
+      let cityName =Local.getItem(CITYNAME);
+         //   初始化城市
+      if (cityName == null){
+         cityName = '上海';
+      }
+
       this.props.actactions.update({
          cityName:cityName
       })

@@ -31,7 +31,6 @@ export default class Ad extends Component {
             return res.json();
          })
          .then(data => {
-            console.log([...this.state.data, ...data.data]);
             this.setState({
                data: [...this.state.data, ...data.data],
                hasMore: data.hasMore,

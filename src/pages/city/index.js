@@ -6,7 +6,8 @@ import {bindActionCreators} from 'redux'
 import * as userInfoActionsFromOtherFile from '../../reduxs/actions'
 import {withRouter} from 'react-router-dom'
 import CityLists from '../../components/citylist'
-
+import Local from '../../utils';
+import { CITYNAME } from '../../utils/keys'
 class City extends Component {
 
    render() {
@@ -26,8 +27,9 @@ class City extends Component {
       const userinfo = this.props.userinfo;
       userinfo.cityName = cityName;
       this.props.userInfoActions.update(userinfo);
-      this.props.history.replace("/")
-
+      this.props.history.replace("/");
+      // local
+      Local.setItem(CITYNAME,cityName)
    }
 }
 
