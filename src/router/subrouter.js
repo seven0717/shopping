@@ -6,6 +6,7 @@ import Mine from '../pages/mine';
 import Order from '../pages/order';
 import City from '../pages/city';
 import Search from '../pages/search';
+import Detail from '../pages/detail';
 
 
 export default class SubRouter extends Component {
@@ -18,6 +19,7 @@ export default class SubRouter extends Component {
             <Route path='/mine' component={ Mine }></Route>
             <Route path='/city' component={ City }></Route>
             <Route path='/search/:type/:keyword?' component={ Search }></Route>
+            <Route path='/detail/:id' component={ Detail }></Route>
             <Route component={ NotFound }></Route>
          </Switch>
       )

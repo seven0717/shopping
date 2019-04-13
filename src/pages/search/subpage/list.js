@@ -43,7 +43,6 @@ class SubPage extends Component {
          .then(data => {
             let hasMore = data.hasMore;
             let datas = data.data;
-            console.log(datas);
             this.setState({
                hasMore: hasMore,
                data: [...this.state.data, ...datas]
@@ -73,7 +72,6 @@ class SubPage extends Component {
    componentDidUpdate(prevProps, prevState) {
       // const keyword = this.props.keyword;
       const category = this.props.category;
-      console.log(this.props.keyword);
       if(this.props.keyword === prevProps.keyword && category === prevProps.category){
          return;
       }

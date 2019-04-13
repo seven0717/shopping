@@ -67,6 +67,33 @@ router.get('/search/:page/:city/:category', async (ctx,next) => {
    ctx.body = searchListData
 });
 
+// 详情页 - 商户信息
+const detailInfo = require('./detail/info.js')
+router.get('/detail/info/:id', async (ctx,next) => {
+   console.log('详情页 - 商户信息')
+
+   const params = ctx.params
+   const id = params.id
+
+   console.log('商户id: ' + id)
+
+   ctx.body = detailInfo
+})
+// 详情页 - 用户评论
+const detailComment = require('./detail/comment.js')
+router.get('/detail/comment/:page/:id', async (ctx,next) => {
+   console.log('详情页 - 用户点评')
+
+   const params = ctx.params
+   const page = params.page
+   const id = params.id
+
+   console.log('商户id: ' + id)
+   console.log('当前页数: ' + page)
+
+   ctx.body = detailComment
+})
+
 App.use(router.routes())
    .use(router.allowedMethods());
 App.listen(8080,() => {

@@ -34,7 +34,6 @@ export default class Header extends Component {
    }
 
    enterHandle(value){
-      console.log(value);
       // 路由跳转
       this.props.history.push('/search/all/' + encodeURIComponent(value))
    }
